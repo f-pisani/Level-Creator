@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GUI</class>
+ <widget class="QMainWindow" name="GUI">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1300</width>
+    <height>725</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1300</width>
+    <height>725</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1300</width>
+    <height>725</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>1300</width>
+    <height>725</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>[GNB] Level Editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>data/Object.png</normaloff>data/Object.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>32</width>
+    <height>32</height>
+   </size>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="mainWidget">
+   <widget class="QFrame" name="editorFrame">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1024</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+   </widget>
+   <widget class="GUI_ToolBox" name="toolBox" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1045</x>
+      <y>10</y>
+      <width>240</width>
+      <height>600</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1300</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="actionFileNew"/>
+    <addaction name="actionFileOpen"/>
+    <addaction name="actionFileSave"/>
+    <addaction name="actionFileSave_As"/>
+    <addaction name="actionFileClose"/>
+    <addaction name="separator"/>
+    <addaction name="actionFileQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuLevel">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Level</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="actionLevelSettings"/>
+    <addaction name="actionLevelAssetsManager"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionViewZoom25"/>
+    <addaction name="actionViewZoom50"/>
+    <addaction name="actionViewZoom100"/>
+    <addaction name="actionViewZoom125"/>
+    <addaction name="actionViewZoom150"/>
+    <addaction name="actionViewZoom175"/>
+    <addaction name="separator"/>
+    <addaction name="actionViewReset"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuLevel"/>
+   <addaction name="menuView"/>
+  </widget>
+  <widget class="GUI_StatusBar" name="statusBar">
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="GUI_ToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionFileNew">
+   <property name="text">
+    <string>New...</string>
+   </property>
+   <property name="toolTip">
+    <string>Create a new level.</string>
+   </property>
+  </action>
+  <action name="actionFileOpen">
+   <property name="text">
+    <string>Open...</string>
+   </property>
+   <property name="toolTip">
+    <string>Open an existing level.</string>
+   </property>
+  </action>
+  <action name="actionFileSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save the current level.</string>
+   </property>
+  </action>
+  <action name="actionFileSave_As">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save As...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save the current level. (Ask for directory.)</string>
+   </property>
+  </action>
+  <action name="actionFileClose">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Close...</string>
+   </property>
+   <property name="toolTip">
+    <string>Close current level.</string>
+   </property>
+  </action>
+  <action name="actionFileQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="toolTip">
+    <string>Quit [GNB] Level Design.</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="actionLevelAssetsManager">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Assets Manager...</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Assets Manager (add, rename, remove, export, import).</string>
+   </property>
+  </action>
+  <action name="actionLevelSettings">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Settings...</string>
+   </property>
+   <property name="toolTip">
+    <string>Show current level settings.</string>
+   </property>
+  </action>
+  <action name="actionViewZoom25">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>25 %</string>
+   </property>
+   <property name="toolTip">
+    <string>Set zoom to: 25%.</string>
+   </property>
+  </action>
+  <action name="actionViewZoom50">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>50 %</string>
+   </property>
+   <property name="toolTip">
+    <string>Set zoom to: 50%.</string>
+   </property>
+  </action>
+  <action name="actionViewZoom100">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>100 %</string>
+   </property>
+   <property name="toolTip">
+    <string>Set zoom to: 100%.</string>
+   </property>
+  </action>
+  <action name="actionViewZoom125">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>125 %</string>
+   </property>
+   <property name="toolTip">
+    <string>Set zoom to: 125%.</string>
+   </property>
+  </action>
+  <action name="actionViewZoom150">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>150 %</string>
+   </property>
+   <property name="toolTip">
+    <string>Set zoom to: 150%.</string>
+   </property>
+  </action>
+  <action name="actionViewZoom175">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>175 %</string>
+   </property>
+   <property name="toolTip">
+    <string>Set zoom to: 175%.</string>
+   </property>
+  </action>
+  <action name="actionViewReset">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+   <property name="toolTip">
+    <string>Reset zoom and view position (center).</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GUI_ToolBar</class>
+   <extends>QToolBar</extends>
+   <header>GUI_ToolBar.hpp</header>
+  </customwidget>
+  <customwidget>
+   <class>GUI_StatusBar</class>
+   <extends>QStatusBar</extends>
+   <header>GUI_StatusBar.hpp</header>
+  </customwidget>
+  <customwidget>
+   <class>GUI_ToolBox</class>
+   <extends>QWidget</extends>
+   <header>GUI_ToolBox.hpp</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
