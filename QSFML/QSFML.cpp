@@ -81,7 +81,11 @@ void QSFML::showEvent(QShowEvent*)
 {
     if(!m_initialized)
     {
+#ifdef _WIN32
         sf::RenderWindow::create(reinterpret_cast<HWND>(winId()), sf::ContextSettings(0, 0, 8));
+#else
+        sf::RenderWindow::create(static_cast<sf::WindowHandle>(winId()), sf::ContextSettings(0, 0, 8));
+#endif
 
         OnInit();
 
@@ -140,7 +144,7 @@ void QSFML::mouseDoubleClickEvent(QMouseEvent* event)
 
 void QSFML::wheelEvent(QWheelEvent* event)
 {
-    m_mouseWheel = event->delta();
+    m_mouseWheel = event->angleDelta().y();
 }
 
 

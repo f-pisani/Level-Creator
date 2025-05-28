@@ -1,0 +1,92 @@
+# Build directories
+build/
+debug/
+release/
+Debug/
+Release/
+
+# Qt generated files
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+Makefile*
+!Makefile
+*.qm
+.qmake.cache
+.qmake.stash
+
+# C++ compiled files
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dll
+*.dylib
+*.lib
+*.exe
+*.out
+*.app
+
+# Dependency files
+*.d
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Qt Creator
+*.autosave
+*.user
+*.user.*
+
+# Visual Studio
+*.suo
+*.ncb
+*.sdf
+*.opensdf
+*.vcxproj.user
+*.vs/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Core dumps
+core
+core.*
+vgcore.*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
+
+# Test files
+test-*
+*-test
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
